@@ -1,22 +1,22 @@
 @use 'variables' as *;
 
 .card-container {
-  padding: 50px 40px;
+  padding: $padding-card-container;
   display: grid;
-  grid-template-columns: repeat(1, 200px);
-  grid-gap: 46px 48px;
+  grid-template-columns: repeat(1, $card-width);
+  grid-gap: $grid-gap;
   justify-content: center;
 
   @media screen and (min-width: 488px) {
-    grid-template-columns: repeat(2, 200px);
+    grid-template-columns: repeat(2, $card-width);
   }
 
   @media screen and (min-width: 768px) {
-    grid-template-columns: repeat(3, 200px);
+    grid-template-columns: repeat(3, $card-width);
   }
 
   @media screen and (min-width: 1024px) {
-    grid-template-columns: repeat(4, 200px);
+    grid-template-columns: repeat(4, $card-width);
   }
 }
 
@@ -30,8 +30,6 @@
   background-color: $background-color;
   box-sizing: border-box;
   transition: transform $hover-time ease;
-
-
 
   &__image {
     width: $image-width;
@@ -48,14 +46,13 @@
     transition: color $hover-time ease;
   }
 
-  &:hover{
+  &:hover {
     transform: scale(1.2);
 
     & .card__title {
       color: $main-color-hover;
     }
   }
-
 
   &__description {
     font-size: 10px;
@@ -117,6 +114,7 @@
     font-size: 14px;
     line-height: 40px;
     box-sizing: border-box;
+    transition: background-color $hover-time ease;
 
     &:hover {
       background-color: $background-color;

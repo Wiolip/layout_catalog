@@ -20,7 +20,6 @@
   }
 }
 
-
 .nav {
   &__list {
     display: flex;
@@ -42,7 +41,7 @@
     transition: color $hover-time ease;
 
     &:hover {
-      color:$accent-color;
+      color: $accent-color;
     }
   }
 
@@ -51,9 +50,8 @@
   }
 }
 
-
 .is-active {
-  color: $accent-color;
+  color: $nav-link;
   position: relative;
 
   &::after {
